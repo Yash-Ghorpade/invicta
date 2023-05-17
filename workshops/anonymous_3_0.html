@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ANONYMOUS 3.0</title>
+  <link rel = "icon" href = "../assets/logos/1.png" type = "image/x-icon">
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/footer.css" />
+  <script src="https://cdn.lordicon.com/pzdvqjsp.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  <style>
+      .preloader {
+    position: fixed;
+    z-index: 12000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    display:flex;
+    justify-content:center;
+    justify-items:center;
+    }
+    .navbar{
+    box-shadow: 0px 0px 20px #000000;
+}
+    
+    .loading{
+        margin-left:-27.5vh;
+    margin-top:56vh;
+    color:#5ebbdc;
+}
+    .banner-image {
+      background-image: url('../assets/img/banner-img.jpg');
+      background-size: cover;
+    }
+
+    .page {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url(../assets/img/backgrounds/1.jpg) no-repeat fixed bottom / cover;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .title h1 {
+      color: #fff;
+      font-size: 60px;
+
+    }
+    .footer .social a{
+    background-color:#32a9d3;
+}
+    
+    .navbar, .footer, .headings{
+    background-color:#5ebbdc;
+}
+    
+    .title h3 {
+      color: #fff;
+      font-size: 26px;
+      font-weight: normal;
+      align-items: center;
+      align-content: center;
+      align-self: center;
+    }
+
+    .Description {
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.7);
+      margin-left: 2vh;
+      margin-right: 2vh;
+      padding: 2vh;
+      margin-bottom: 10vh;
+    }
+
+    .buttons {
+      margin-top: 6vh;
+      margin-block-end: 4vh;
+    }
+
+    .buttons a {
+      position: relative;
+      background: transparent;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 2.5vh;
+      color: #fff;
+      border-radius: 10px;
+      font-weight: 400;
+      align-content:center;
+      padding: 2vh 2.5vh;
+      transition: 0.5s;
+    }
+
+    .buttons a:hover {
+      background: var(--clr);
+      margin-left: 0vh;
+      letter-spacing: 0.20em;
+      box-shadow: 0 0 35px var(--clr);
+    }
+
+    .buttons a::before {
+      content: '';
+      position: absolute;
+      inset: 2vh;
+      background: transparent;
+    }
+
+    .title {
+      margin-top: 30vh;
+      animation: moveUp;
+      animation-duration: 1s;
+    }
+
+    @keyframes moveUp {
+      from {
+        margin-top: 40vh;
+        opacity: 0%;
+      }
+
+      to {
+        margin-top: 30vh;
+        opacity: 100%;
+      }
+
+    }
+
+    .contents {
+      padding-top: 1.5vh;
+      padding-left: 1vh;
+      padding-right: 2vh;
+      text-align: justify;
+    }
+
+    .sdown {
+      margin-top: 23vh;
+      color: white;
+    }
+
+    .arrow {
+      width: 25%;
+      height: 25%;
+    }
+    
+
+    @media only screen and (max-width:1080px) {
+      .title {
+        margin-top: 20vh;
+      }
+
+      .sdown {
+        margin-top: 16vh;
+        color: white;
+      }
+
+      .arrow {
+        width: 30%;
+        height: 30%;
+      }
+
+      .buttons {
+        margin-top: 8vh;
+        margin-block-end: 4vh;
+      }
+
+      .buttons a {
+        margin-bottom: 20px;
+      }
+      .buttons.contact{
+          padding:1.5vh 2vh;
+      }
+      .loading{
+          margin-left:-26vh;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+   <div class = "preloader">
+        <div class = "row" style="margin-top:20vh;margin-left:-15vh">
+            <lord-icon
+                src="https://cdn.lordicon.com/hovbgwmd.json"
+                trigger="loop"
+                colors="primary:#5ebbdc,secondary:#5ebbdc"
+                style="width:40vh;height:40vh">
+            </lord-icon>
+        </div>
+        <div class="row loading">
+	        <h3>Loading...</h3>
+	    </div>
+    </div>
+  <!-- Navbar  -->
+  <nav class="navbar fixed-top navbar-expand-lg p-md-3">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html"><img src="../assets/img/invicta.png" style="width:18vh;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class=""><lord-icon src="https://cdn.lordicon.com/bwhjesak.json" trigger="ontoggle" colors="primary:#121331,secondary:#000000" style="width:3vh;height:3vh"></lord-icon></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="mx-auto"></div>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="../index.html#workshops">Workshops</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="../index.html#contactUs">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#aboutUs">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="accomo.html" disable>Accomodation</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="jumbotron">
+    <div class="page">
+
+      <div class="title">
+        <center>
+          <h1>ANONYMOUS 3.0</h1>
+        </center>
+        <center>
+          <h3 style="margin-top:-2vh;margin-bottom:3vh">An Ethical Hacking Workshop </h3>
+        </center>
+        <div class="container" style="display:flex;justify-content: center;">
+          <div class="row">
+            <div class="buttons">
+              <a href="https://forms.gle/x7A2iGQo1K2yHtJL9" style="--clr:#00ff26;background-color: #23d823;">Register</a>
+
+              <a href="../assets/pdfs/1.pdf" download="anonymous 3" style="--clr:#1e9bff">
+                <lord-icon src="https://cdn.lordicon.com/ifqmqwui.json" trigger="loop" colors="primary:#ffffff"
+                  style="width:4vh;height:4vh">
+                </lord-icon><u>Brochure</u>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="sdown">
+          <center>
+            <h6>Scroll for More Details</h6>
+          </center>
+        </div>
+        <div class="container" style="display:flex;justify-content: center;">
+
+          <center>
+            <lord-icon class="arrow" src="https://cdn.lordicon.com/rxufjlal.json" trigger="loop"
+              colors="primary:#ffffff">
+            </lord-icon>
+          </center>
+        </div>
+      </div>
+      <div class="jumbotron">
+        <div class="container">
+          <div class="Description">
+            <div class="contents">
+              <div class="row">
+                <div class="col">
+                  <div style="margin-bottom: 2vh;">
+                    <lord-icon src="https://cdn.lordicon.com/qjuahhae.json" trigger="loop"
+                      style="width:8vh;height:8vh">
+                    </lord-icon>
+                    <h5><b>6th & 7th <br> November</b></h5>
+                  </div>
+                </div>
+                <div class="col" style="display:flex;justify-content: end;">
+                  <div style="display: flex;justify-content: center;">
+                  <div class="time" style="margin-bottom: 4vh;">
+                    <lord-icon src="https://cdn.lordicon.com/qznlhdss.json" trigger="loop"
+                      style="width:8vh;height:8vh">
+                    </lord-icon>
+                    <h5><b>09:00 am</b></h5>
+                  </div>
+                  </div>
+                </div>
+
+              </div>
+              <!--modifed-->
+             <div class="row" style="margin-top:4vh">
+                <div class="col">
+                  <div style="margin-bottom: 2vh;">
+                    <h5><b>Fees</b></h5>
+                    <h5>₹150</h5>
+                  </div>
+                </div>
+                <div class="col" style="display:flex;justify-content: end;">
+                  <div style="display: flex;justify-content: center;">
+                  <div class="time" style="margin-bottom: 4vh;">
+                    <h5><b>Duration</b></h5>
+                    <h5>2 Days</h5>
+                  </div>
+                  </div>
+                </div>
+
+              </div>
+              <hr>
+          
+                <h4>Description</h4>
+              <p>
+              This is a hands-on workshop on Ethical hacking tools for 2 Days in which participants will get in-depth knowledge about all the ethical hacking concepts and some tools used for the purpose of system hacking/penetration. This workshop will cover tools like Metasploit, Macros, Burpsuite, Keylogger and much more. Participants will also get familiar with Kali Linux and types of system booting.
+              </p>
+ <hr>
+              
+
+              <!--Pre-Requesites-->
+              <div class=requirements style="margin-top: 0vh;">
+                <h4>Requirements</h4>
+                <ul>
+                  <li>An empty pendrive with 16 GB storage</li>
+                  <li>Basic konwledge of programming</li>
+                  <li>A laptop with minimum 4GB RAM, i5 proccessor</li>
+                  <li>Basic knowledge of Linux</li>
+                </ul>
+              </div>
+                  <hr>
+                  
+                  <h4>Resource Persons:</h4>
+                  <div> Yash Ghorpade, Siddhi Kasbekar, Rutuja Mangulakar, Vidya Bangale</div>
+
+              <div class="buttons">
+              
+                  
+                <center><h4>For query regarding workshop</h4></center>
+
+                <div class="row" style="margin-top: 4vh;display:flex;justify-content:center">
+                    <center>
+                        <a href="tel:918625888448" style="--clr:#00ff26;background-color: #006400; padding:1.5vh 1.7vh;"> Contact</a>
+                  </center>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <section class="footer" id="aboutUs">
+      <div class="Team" style="color:black">
+        <h5>
+          About Us
+        </h5>
+
+        <p>
+          We, TEAM MAVERICKS symbolize a team having an unorthodox views and innovative ideas. "MAVERICKS" means an independent person or a team who is similar to a bird that loves to live a free and prosperous life.
+
+        </p>
+      </div>
+
+
+      <div class="social" style="color:black">
+        <a href="https://www.instagram.com/teammavericks.kit/"><i class="fab fa-instagram"></i></a>
+        <a href="https://discord.gg/FEbUjrWNqp"><i class="fab fa-discord"></i></a>
+        <a href="https://www.linkedin.com/in/teammavericks/"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://wa.me/919766246585"><i class="fab fa-whatsapp"></i></a>
+      </div>
+
+      
+    </section>
+      <script>
+      $('.navbar-nav>li>a').on('click', function(){
+$('.navbar-collapse').collapse('hide');
+});
+  </script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+    </script>
+    <script>
+      document.querySelectorAll('a[href^="#"').forEach(anchor=>{
+          anchor.addEventListener("click", function(e){
+              e.preventDefault();
+              document.querySelector(this.getAttribute("href")).scrollIntoView({
+                  behavior:"smooth",
+                 block: "center"
+              });
+          });
+      });
+  </script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script>
+    $(window).load(function() {
+      preloaderFadeOutTime = 1000;
+      function hidePreloader() {
+      var preloader = $('.preloader');
+      preloader.fadeOut(preloaderFadeOutTime);
+      }
+      hidePreloader();
+      });</script>
+</body>
+
+</html>

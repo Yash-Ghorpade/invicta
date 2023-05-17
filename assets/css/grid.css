@@ -1,0 +1,79 @@
+.article figcaption {
+  position: absolute;
+}
+.article {
+  position: relative;
+}
+
+.article {
+  overflow: hidden;
+    width: 20vh; 
+  margin: 8px;
+  transition: 0.4s ease-in;
+  flex: 1 1 10em;
+}
+.article:hover{
+width: 30vh;
+transition: 0.4s ease-out;
+flex: 1 2 10rem;
+
+}
+
+.article img {
+  filter: grayscale(0);
+  width: 100%;
+  min-height: 100%;
+  transition: 0.2s;
+}
+.article figcaption {
+  font-size: 14px;
+  text-shadow: 0 1px 0 rgba(51,51,51,0.3);
+  color: #fff;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 40px;
+  box-shadow: 0 0 2px rgba(0,0,0,0.2);
+  background: rgba(6,18,53,0.6);
+  opacity: 0;
+  transform: scale(1.15);
+  transition: 0.2s;
+}
+
+
+.article figcaption h3 {
+  color: #81d1ee;
+  font-size: 16px;
+  margin-bottom: 1vh;
+  font-weight: bold;
+}
+.article:hover img,
+.article:focus img,
+.article:active img {
+   filter:grayscale(0);
+  filter: blur(2px);
+  transform: scale(0.97);
+}
+.article:hover figcaption,
+.article:focus figcaption,
+.article:active figcaption {
+  opacity: 1;
+  transform: none;
+}
+
+@media only screen and (max-width: 1080px)
+{
+    .article figcaption h3{
+        margin-top:4vh;
+        margin-bottom:1vh;
+    }
+    .article figcaption .btn
+    {
+        margin-top:1vh;
+    }
+  .article figcaption, .article figcaption h3, .article figcaption .btn{
+  font-size:1.5vh;
+  
+    }
+}
